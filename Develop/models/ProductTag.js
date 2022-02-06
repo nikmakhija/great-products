@@ -21,7 +21,39 @@ ProductTag.init(
     freezeTableName: true,
     underscored: true,
     modelName: 'product_tag',
-  }
+  },
+  {
+    productTag_product_id: {
+      type: DataType.INTERGER,
+      references: {
+        model: 'productTag',
+        key: 'product_id'
+      }
+    }
+  },
+  {
+    sequelize,
+    timestamps: false,
+    freezeTableName: true,
+    underscored: true,
+    modelName: 'product_tag',
+  },
+  {
+    productTag_tag_id: {
+      type: DataType.INTERGER,
+      references: {
+        model: 'productTag',
+        key: 'tag_id'
+      }
+    }
+  },
+  {
+    sequelize,
+    timestamps: false,
+    freezeTableName: true,
+    underscored: true,
+    modelName: 'product_tag',
+  },
 );
 
 module.exports = ProductTag;

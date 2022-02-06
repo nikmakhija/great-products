@@ -16,19 +16,32 @@ category
 Product.init(
 {
   id: {
-    type: DataTypes.STRING
+    type: DataTypes.INTERGER,
+    allowNULL: false,
+    primaryKey: true,
+    autoIncrement: true
   },
   product_name: {
-    type: DataTypes.STRING
+    type: DataTypes.STRING,
+    allowNull: false
   },
   price: {
-  type: DataTypes.INTERGER
+  type: DataTypes.DECIMAL,
+  allowNull: false,
+  validate: {
+    value: decimal
+  },
   },
   stock: {
-    type: DataTypes.INTERGER
+    type: DataTypes.INTERGER,
+    allowNull: false,
+    defaultValue: 10,
+    validate: {
+      value: numeric
+    }
   },
-  catagory:{
-    type: DataTypes.STRING
+  category:{
+    type: DataTypes.INTERGER
   },
 }
 )

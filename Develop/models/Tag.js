@@ -21,7 +21,16 @@ Tag.init(
     freezeTableName: true,
     underscored: true,
     modelName: 'tag',
+  },
+  {
+tag_name:{
+  type: datatype.STRING,
+  references: {
+    model: 'tag',
+    key: 'name'
   }
+}
+}
 );
 
 module.exports = Tag;

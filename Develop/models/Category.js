@@ -21,7 +21,24 @@ Category.init(
     freezeTableName: true,
     underscored: true,
     modelName: 'category',
+  },
+  
+  {
+  costumer_name: {
+    type: DataType.STRING,
+    references: {
+      model: 'costumer',
+      key: 'name'
+    }
   }
-);
+  },
+{
+    sequelize,
+    timestamps: false,
+    freezeTableName: true,
+    underscored: true,
+    modelName: 'category',
+  },
+  );
 
 module.exports = Category;
